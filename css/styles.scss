@@ -1,0 +1,149 @@
+/* Google Font */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+
+$blue: hsl(202, 59%, 50%);
+$lightblue: hsl(191, 52%, 77%);
+$tan: hsl(23, 66%, 46%);
+$lighttan: hsl(31, 82%, 66%);
+$fontRoboto: "Roboto Slab", sans-serif;
+$fontAmatic: "Amatic SC", serif;
+
+body {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $fontRoboto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link {
+  color: lighten($lighttan, 50%);
+}
+
+a:visited {
+  color: lighten($blue, 50%);
+}
+
+a:hover {
+  color: lighten($tan, 20%);
+}
+
+.content {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  // padding: 5% 5% 5% 5%;
+}
+
+// this sizes each content div to the size of the device screen
+.content div {
+  height: 100vh;
+  width: 100vw;
+}
+
+.heading {
+  background-color: $blue;
+
+  img {
+    max-width: 10%;
+    margin: 10px 0px -10px 0px;
+  }
+
+  h1, p {
+    font-family: $fontAmatic;
+    margin: 10px 0 -10px 0px;
+    color: lighten($blue, 50%);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: $lightblue;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-top: -15px;
+  }
+
+}
+
+.cleaners-guide {
+  background-color: $lightblue;
+  color: lighten($blue, 50%);
+
+  h1 {
+    font-family: $fontAmatic;
+    margin: 10px 0px -10px 0px;
+    color: $blue;
+    font-size: 3em;
+  }
+
+  h2 {
+    margin-top: 6px;
+  }
+
+  p {
+    font-size: 1.25em;
+    line-height: 1.4em;
+    width: 90%;
+  }
+
+}
+
+.avoid {
+  background-color: $lighttan;
+  text-align: left;
+
+  h1 {
+    margin: 0px 30px 0px 30px;
+    font-family: $fontAmatic;
+    font-size: 3.2em;
+    color: $tan;
+  }
+
+  h2, p {
+    color: lighten($lighttan, 50%);
+    margin: 0px 30px 0px 30px;
+  }
+
+  h2 {
+    margin-top: 15px;
+  }
+
+}
+
+.labels {
+  background-color: $tan;
+
+  h1 {
+    font-family: $fontAmatic;
+    color: $lighttan;
+    font-size: 3.2em;
+    margin-bottom: -5px;
+  }
+
+  h1.more-tips {
+    color: darken($tan, 25%);
+  }
+
+  p {
+    color: lighten($lighttan, 50%);
+    margin: 0px 30px 0px 30px;
+  }
+
+  p.social {
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin-left: 40%;
+  }
+
+}

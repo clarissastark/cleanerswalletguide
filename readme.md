@@ -1,0 +1,5 @@
+I am attaching a PDF of a wallet card that we use as a premium for one of our databases.  The challenge is to put the content into a one page site.  As to not ruin your weekend, I don’t want you to spend more than a few hours on it so trim the content as necessary.  The first 4 panels (page 1 of the pdf) would suffice.
+
+Normally you would get the design as a full page design so this is not how we normally work but it is content that we don’t currently have in a one page site somewhere on our site.  I don’t want you to replicate the card although the one page site should be similar in style. Use the text & colors from the card to build the page.  You don’t need to use all of the sections and you can add stuff in Lorum Ipsum if you need to add some text.   Normally you’d be getting a designed piece to replicate – this is a little different than what you’d normally get here at EWG.
+
+I don’t have the background graphics (bubbles, sponge, spray can, etc.) so you can drop them or you can use something similar if you think it needs it.  If you want to do something with .js – you can but not necessary.
