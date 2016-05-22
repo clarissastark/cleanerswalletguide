@@ -6,8 +6,60 @@ $blue: hsl(202, 59%, 50%);
 $lightblue: hsl(191, 52%, 77%);
 $tan: hsl(23, 66%, 46%);
 $lighttan: hsl(31, 82%, 66%);
+$grey: hsl(220, 1%, 39%);
 $fontRoboto: "Roboto Slab", sans-serif;
 $fontAmatic: "Amatic SC", serif;
+
+@mixin media($queryString){
+  @media #{$queryString} {
+    @content;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ul li {
+     display: inline-block;
+    color: $tan;
+  }
+
+
+  li a {
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 1em;
+    background-color: $blue;
+  }
+
+  li a:hover {
+    color: $lighttan;
+    background-color: $lightblue;
+  }
+}
+
+
+@media all and (max-width: 768px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .navigation {
+    flex-direction: column;
+  }
+}
 
 body {
   text-align: center;
@@ -31,12 +83,6 @@ a:visited {
 
 a:hover {
   color: lighten($tan, 20%);
-}
-
-.content {
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-  // padding: 5% 5% 5% 5%;
 }
 
 // this sizes each content div to the size of the device screen
@@ -93,7 +139,7 @@ a:hover {
   p {
     font-size: 1.25em;
     line-height: 1.4em;
-    width: 90%;
+    margin: 10px 30px 0px 30px;
   }
 
 }
@@ -101,6 +147,7 @@ a:hover {
 .avoid {
   background-color: $lighttan;
   text-align: left;
+  padding: 0% 5% 0% 5%;
 
   h1 {
     margin: 0px 30px 0px 30px;
@@ -146,4 +193,73 @@ a:hover {
     margin-left: 40%;
   }
 
+}
+
+.diy {
+  background-color: lighten($lighttan, 50%);
+  text-align: left;
+  padding: 0% 5% 0% 5%;
+
+  h1 {
+    font-family: $fontAmatic;
+    font-size: 3.2em;
+    color: $blue;
+    margin: 10px 0px -10px 0px;
+  }
+
+  h2 {
+    font-family: $fontAmatic;
+    font-size: 2.2em;
+    color: #55b6e7;
+    margin: 10px 0px -10px 0px;
+  }
+
+  p {
+    line-height: 2em;
+    color: $grey;
+  }
+
+}
+
+.ewg-tips {
+  background-color: #f3f3f4;
+  text-align: left;
+  color: $grey;
+  padding: 0% 5% 0% 5%;
+
+  h1 {
+    font-family: $fontAmatic;
+    font-size: 4em;
+    color: $grey;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    @include media("(min-width:768px)"){
+      flex-direction: row;
+    }
+    @include media("(max-device-width: 480px)"){
+      padding: 0% 5% 0% 5%;
+    }
+  }
+
+  .item {
+    width: 80%;
+    @include media("(min-width:768px)"){
+      flex-grow: 2;
+      align-self: flex-start;
+      width: 20%;
+    }
+    @include media("(max-device-width: 480px)"){
+      flex-grow: 1;
+      padding: 0% 5% 0% 5%;
+      height: 100px;
+      // justify-content: space-around;
+    }
+  }
+}
+
+.content {
+  padding: 10vh 10vh 10vh 10vh;
 }

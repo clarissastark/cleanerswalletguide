@@ -1,6 +1,33 @@
 /* Google Font */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end; }
+
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+nav ul li {
+  display: inline-block;
+  color: #c36328; }
+nav li a {
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 1em;
+  background-color: #3494cb; }
+nav li a:hover {
+  color: #efab61;
+  background-color: #a6d8e3; }
+
+@media all and (max-width: 768px) {
+  .navigation {
+    justify-content: space-around; } }
+@media all and (max-width: 480px) {
+  .navigation {
+    flex-direction: column; } }
 body {
   text-align: center;
   margin-left: auto;
@@ -19,10 +46,6 @@ a:visited {
 
 a:hover {
   color: #e29b6f; }
-
-.content {
-  padding-top: 15vh;
-  padding-bottom: 15vh; }
 
 .content div {
   height: 100vh;
@@ -59,11 +82,12 @@ a:hover {
   .cleaners-guide p {
     font-size: 1.25em;
     line-height: 1.4em;
-    width: 90%; }
+    margin: 10px 30px 0px 30px; }
 
 .avoid {
   background-color: #efab61;
-  text-align: left; }
+  text-align: left;
+  padding: 0% 5% 0% 5%; }
   .avoid h1 {
     margin: 0px 30px 0px 30px;
     font-family: "Amatic SC", serif;
@@ -92,5 +116,57 @@ a:hover {
     font-family: Arial, sans-serif;
     text-align: left;
     margin-left: 40%; }
+
+.diy {
+  background-color: white;
+  text-align: left;
+  padding: 0% 5% 0% 5%; }
+  .diy h1 {
+    font-family: "Amatic SC", serif;
+    font-size: 3.2em;
+    color: #3494cb;
+    margin: 10px 0px -10px 0px; }
+  .diy h2 {
+    font-family: "Amatic SC", serif;
+    font-size: 2.2em;
+    color: #55b6e7;
+    margin: 10px 0px -10px 0px; }
+  .diy p {
+    line-height: 2em;
+    color: #626364; }
+
+.ewg-tips {
+  background-color: #f3f3f4;
+  text-align: left;
+  color: #626364;
+  padding: 0% 5% 0% 5%; }
+  .ewg-tips h1 {
+    font-family: "Amatic SC", serif;
+    font-size: 4em;
+    color: #626364;
+    text-align: center; }
+  .ewg-tips .container {
+    display: flex; }
+    @media (min-width: 768px) {
+      .ewg-tips .container {
+        flex-direction: row; } }
+    @media (max-device-width: 480px) {
+      .ewg-tips .container {
+        padding: 0% 5% 0% 5%; } }
+  .ewg-tips .item {
+    width: 80%; }
+    @media (min-width: 768px) {
+      .ewg-tips .item {
+        flex-grow: 2;
+        align-self: flex-start;
+        width: 20%; } }
+    @media (max-device-width: 480px) {
+      .ewg-tips .item {
+        flex-grow: 1;
+        padding: 0% 5% 0% 5%;
+        height: 100px; } }
+
+.content {
+  padding: 10vh 10vh 10vh 10vh; }
 
 /*# sourceMappingURL=styles.css.map */
